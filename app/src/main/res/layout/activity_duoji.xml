@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgd"
+    tools:context=".DuojiActivity">
+
+    <Button
+        android:id="@+id/change2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="98dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toLeftOf="@id/ll_add"
+        android:background="@drawable/button5"
+        android:text="切换&#10;mode"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_wifi2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/wifi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:textOff="OFF"
+            android:textOn="ON" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wifi"
+            android:text="WIFI"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_text"
+
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/ll_status2"
+        android:layout_toRightOf="@+id/ll_wifi2"
+        android:orientation="horizontal">
+
+
+        /**
+        android:imeOptions="flagNoExtractUi"解决输入框全屏问题
+        */
+
+        <EditText
+            android:id="@+id/ip2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="请输入IP地址"
+            android:imeOptions="flagNoExtractUi" />
+
+
+        <EditText
+            android:id="@+id/port2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="请输入端口号"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_status2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/status2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="未连接小车"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/connect2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/discinnect" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_text"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/ll_status2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="是否记住"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/remember2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_left_front2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/Left2"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_move"
+        android:text="左前W"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/stop2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_stop"
+        android:text="停" />
+
+
+    <Button
+        android:id="@+id/Left2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+
+        android:background="@drawable/bg_left" />
+
+
+    <RelativeLayout
+        android:id="@+id/Up_Down2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="80dp">
+
+        <Button
+            android:id="@+id/Up2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_up" />
+
+
+        <Button
+            android:id="@+id/Down2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@+id/Up2"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/bg_down" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_right_front2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/Right2"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_move"
+        android:text="右前W"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Right2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="160dp"
+        android:background="@drawable/bg_right" />
+
+
+    <Button
+        android:id="@+id/bt_left_rotate2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/Left2"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_move"
+        android:text="左旋"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bt_right_rotate2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/Right2"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_move"
+        android:text="右旋"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/bt_left_move2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_move"
+            android:text="左移"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_right_move2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/bt_left_move2"
+            android:background="@drawable/button_move"
+            android:text="右移"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_reduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/reduce1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button1"
+            android:text="舵机1-"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/reduce2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button2"
+            android:text="舵机2-"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/reduce3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button3"
+            android:text="舵机3-"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/reduce4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button4"
+            android:text="舵机4-"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/reduce5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button5"
+            android:text="舵机5-"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:layout_toLeftOf="@id/ll_reduce"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <Button
+            android:id="@+id/add1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button1"
+            android:text="舵机1+"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button2"
+            android:text="舵机2+"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button3"
+            android:text="舵机3+"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button4"
+            android:text="舵机4+"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/button5"
+            android:text="舵机5+"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

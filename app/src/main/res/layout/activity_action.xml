@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgd"
+    tools:context=".ActionActivity">
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:layout_toRightOf="@id/rl_move"
+        android:background="@drawable/button5"
+        android:text="切换&#10;mode"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Switch
+            android:id="@+id/wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showText="true"
+            android:textOff="OFF"
+            android:textOn="ON" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wifi"
+            android:text="WIFI"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_text"
+
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/ll_status"
+        android:layout_toRightOf="@+id/ll_wifi"
+        android:orientation="horizontal">
+
+
+        /**
+        android:imeOptions="flagNoExtractUi"解决输入框全屏问题
+        */
+
+        <EditText
+            android:id="@+id/ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="请输入IP地址"
+            android:imeOptions="flagNoExtractUi" />
+
+
+        <EditText
+            android:id="@+id/port"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:hint="请输入端口号"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="未连接小车"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/discinnect" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_text"
+        android:layout_marginRight="40dp"
+        android:layout_toLeftOf="@+id/ll_status"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="是否记住"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_left_front"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/Left"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_move"
+        android:text="左前W"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/Left"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+
+        android:background="@drawable/bg_left" />
+
+
+    <RelativeLayout
+        android:id="@+id/Up_Down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="80dp">
+
+        <Button
+            android:id="@+id/Up"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/bg_up" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_stop"
+            android:text="停" />
+
+        <Button
+            android:id="@+id/Down"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@+id/Up"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/bg_down" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt_right_front"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_above="@+id/Right"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_move"
+        android:text="右前W"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/Right"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="160dp"
+        android:background="@drawable/bg_right" />
+
+
+    <Button
+        android:id="@+id/bt_left_rotate"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/Left"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_move"
+        android:text="左旋"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/bt_right_rotate"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/Right"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_move"
+        android:text="右旋"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rl_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="5dp">
+
+        <Button
+            android:id="@+id/bt_left_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_move"
+            android:text="左移"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_right_move"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/bt_left_move"
+            android:background="@drawable/button_move"
+            android:text="右移"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/button_ll1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button1"
+            android:text="精左放"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button1"
+            android:text="精中放"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll1_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button1"
+            android:text="精右放"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll1_4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button5"
+            android:text="放车左"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll1_5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button5"
+            android:text="放车中"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll1_6"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button5"
+            android:text="放车右"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/ll_1"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/button_ll2_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button1"
+            android:text="精左取"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll2_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button1"
+            android:text="精中取"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll2_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button1"
+            android:text="精右取"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll2_4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button5"
+            android:text="取车左"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll2_5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button5"
+            android:text="取车中"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll2_6"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button5"
+            android:text="取车右"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/ll_2"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/button_ll3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button2"
+            android:text="抓上左"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll3_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button2"
+            android:text="抓上中"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll3_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button2"
+            android:text="抓上右"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll3_4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button3"
+            android:text="库上左"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll3_5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button3"
+            android:text="库上中"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll3_6"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button3"
+            android:text="库上右"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/ll_3"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/button_ll4_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button2"
+            android:text="抓下左"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll4_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button2"
+            android:text="抓下中"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll4_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button2"
+            android:text="抓下右"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll4_4"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button3"
+            android:text="库下左"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll4_5"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button3"
+            android:text="库下中"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_ll4_6"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/button3"
+            android:text="库下右"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
