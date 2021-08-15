@@ -77,7 +77,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
     private long downTime = 0;//button被按下的时间
     private long thisTime = 0;//while每次循环的时间
     private boolean onBtTouch = false;//button是否被按下
-    final  Handler handler = new Handler() {
+    final Handler handler = new Handler() {
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
@@ -289,7 +289,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('V').start();
+                                        new SendThread2('V').start();
                                         Log.d(TAG, "舵机1+ 长按");
                                     }
 
@@ -308,7 +308,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('V').start();
+                            new SendThread2('V').start();
                             Log.d(TAG, "舵机1+ 单击");
                         } else {
 
@@ -331,7 +331,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('v').start();
+                                        new SendThread2('v').start();
                                         Log.d(TAG, "舵机1- 长按");
                                     }
 
@@ -349,7 +349,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('v').start();
+                            new SendThread2('v').start();
                             Log.d(TAG, "舵机1- 单击");
                         } else {
                             showToast("请先连接小车");
@@ -371,7 +371,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('W').start();
+                                        new SendThread2('W').start();
                                         Log.d(TAG, "舵机2+ 长按");
                                     }
 
@@ -389,7 +389,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('W').start();
+                            new SendThread2('W').start();
                             Log.d(TAG, "舵机2+ 单击");
                         } else {
                             showToast("请先连接小车");
@@ -411,7 +411,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('w').start();
+                                        new SendThread2('w').start();
                                         Log.d(TAG, "舵机2- 长按");
                                     }
 
@@ -429,7 +429,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('w').start();
+                            new SendThread2('w').start();
                             Log.d(TAG, "舵机2- 单击");
                         } else {
                             showToast("请先连接小车");
@@ -451,7 +451,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('X').start();
+                                        new SendThread2('X').start();
                                         Log.d(TAG, "舵机3+ 长按");
                                     }
 
@@ -469,7 +469,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('X').start();
+                            new SendThread2('X').start();
                             Log.d(TAG, "舵机3+ 单击");
                         } else {
                             showToast("请先连接小车");
@@ -491,7 +491,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('x').start();
+                                        new SendThread2('x').start();
                                         Log.d(TAG, "舵机3- 长按");
                                     }
 
@@ -509,7 +509,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('x').start();
+                            new SendThread2('x').start();
                             Log.d(TAG, "舵机3- 单击");
                         } else {
                             showToast("请先连接小车");
@@ -531,7 +531,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('Y').start();
+                                        new SendThread2('Y').start();
                                         Log.d(TAG, "舵机4+ 长按");
                                     }
 
@@ -549,7 +549,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('Y').start();
+                            new SendThread2('Y').start();
                             Log.d(TAG, "舵机4+ 单击");
                         } else {
                             showToast("请先连接小车");
@@ -571,7 +571,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('y').start();
+                                        new SendThread2('y').start();
                                         Log.d(TAG, "舵机4- 长按");
                                     }
 
@@ -589,7 +589,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('y').start();
+                            new SendThread2('y').start();
                             Log.d(TAG, "舵机4- 单击");
                         } else {
                             showToast("请先连接小车");
@@ -611,7 +611,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('Z').start();
+                                        new SendThread2('Z').start();
                                         Log.d(TAG, "舵机5+ 长按");
                                     }
 
@@ -629,7 +629,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('Z').start();
+                            new SendThread2('Z').start();
                             Log.d(TAG, "舵机5+ 单击");
                         } else {
                             showToast("请先连接小车");
@@ -651,7 +651,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                                 thisTime = System.currentTimeMillis();
                                 if (thisTime - downTime >= 500) {
                                     if (pw != null) {
-                                        new SendThread('z').start();
+                                        new SendThread2('z').start();
                                         Log.d(TAG, "舵机5- 长按");
                                     }
 
@@ -669,7 +669,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                     onBtTouch = false;
                     if (thisTime - downTime < 500) {
                         if (pw != null) {
-                            new SendThread('z').start();
+                            new SendThread2('z').start();
                             Log.d(TAG, "舵机5- 单击");
                         } else {
                             showToast("请先连接小车");
@@ -724,7 +724,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.Up2:
                 if (pw != null) {
-                    new SendThread('1').start();
+                    new SendThread2('1').start();
 
                 } else {
                     showToast("请先连接小车");
@@ -733,63 +733,63 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.Down2:
                 if (pw != null) {
-                    new SendThread('2').start();
+                    new SendThread2('2').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.Left2:
                 if (pw != null) {
-                    new SendThread('3').start();
+                    new SendThread2('3').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.Right2:
                 if (pw != null) {
-                    new SendThread('4').start();
+                    new SendThread2('4').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.bt_left_move2:
                 if (pw != null) {
-                    new SendThread('5').start();
+                    new SendThread2('5').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.bt_right_move2:
                 if (pw != null) {
-                    new SendThread('6').start();
+                    new SendThread2('6').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.bt_left_front2:
                 if (pw != null) {
-                    new SendThread('7').start();
+                    new SendThread2('7').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.bt_right_front2:
                 if (pw != null) {
-                    new SendThread('8').start();
+                    new SendThread2('8').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.bt_left_rotate2:
                 if (pw != null) {
-                    new SendThread('0').start();
+                    new SendThread2('0').start();
                 } else {
                     showToast("请先连接小车");
                 }
                 break;
             case R.id.bt_right_rotate2:
                 if (pw != null) {
-                    new SendThread('9').start();
+                    new SendThread2('9').start();
                 } else {
                     showToast("请先连接小车");
                 }
@@ -798,7 +798,7 @@ public class DuojiActivity extends AppCompatActivity implements View.OnClickList
 
             case R.id.stop2:
                 if (pw != null) {
-                    new SendThread('S').start();
+                    new SendThread2('S').start();
                 } else {
                     showToast("请先连接小车");
                 }
